@@ -5,5 +5,8 @@
  * @returns {string}
  */
 function truncate(str, maxlength) {
-  // ваш код...
+  const threeDots = String.fromCodePoint(8230);
+
+  return (str.length > maxlength) ?
+    str.slice(0, maxlength - 1) + threeDots : str;
 }
